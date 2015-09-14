@@ -44,8 +44,9 @@ debugger;
       $('#show-contact h2').text(newDestination.country);
       $('.date').text(newDestination.date);
       $('.partner').text(newDestination.partner);
-      newDestination.cities.forEach(function(city) {
-        $('ul#cities').append("<li>" + city.city + ", " + city.landmark + ", " + city.notes + "</li>");
+      $("ul#cities").text("");
+      newDestination.cities.forEach(function(citi) {
+        $('ul#cities').append("<li>" + citi.city + ", " + citi.landmark + ", " + citi.notes + "</li>");
       });
     });
 
